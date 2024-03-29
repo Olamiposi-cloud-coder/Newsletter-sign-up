@@ -1,7 +1,9 @@
-* {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
 }
 
 :root {
@@ -24,13 +26,134 @@
 
 body {
   background-color: var(--DarkSlateGrey);
+  font-family: "RobotoRegular";
 }
 
-li {
+h1 {
+  font-size: 32px;
+  font-family: "Roboto";
+  color: var(--DarkSlateGrey);
+  margin-top: 20px;
+}
+
+p {
+  font-family: "RobotoRegular";
+  color: var(--CharcoalGrey);
+  margin: 20px 0;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
   font-family: "RobotoRegular", sans-serif;
   list-style: none;
   margin-bottom: 10px;
-  font-size: 16px;
+  font-size: 14px;
+}
+
+ul li img {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+label,
+input,
+.btn {
+  display: block;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.sign-up_form {
+  display: flex;
+  width: 55%;
+  height: 70vh;
+  background-color: var(--White);
+  margin: 30px auto;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 30px;
+}
+
+.form {
+  width: 70%;
+  padding: 10px;
+}
+
+.img {
+  width: 60%;
+  padding-right: 10px;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+
+label {
+  margin: 25px 0 10px 0;
+  font-family: "Roboto";
+}
+
+input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--Grey);
+  border-radius: 10px;
+}
+
+.btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  background-color: var(--DarkSlateGrey);
+  color: var(--White);
+  font-family: "Roboto";
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .sign-up_form {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+  }
+  .img {
+    width: 100%;
+    height: auto;
+  }
+
+  .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    margin: 0;
+    border-radius: 10px;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .img {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.success-message {
+  display: none;
 }
 
 .attribution {
