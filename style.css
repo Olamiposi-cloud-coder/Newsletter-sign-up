@@ -190,7 +190,7 @@ input[type="email"]:hover {
   background-color: var(--tomatoColor);
 }
 
-@media (max-width: 375px) {
+@media (max-width: 700px) {
   .sign-up_form {
     display: none;
     flex-direction: column-reverse;
